@@ -3,8 +3,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Microsoft.Diagnostics.Tracing;
 using System.Linq;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestSupport

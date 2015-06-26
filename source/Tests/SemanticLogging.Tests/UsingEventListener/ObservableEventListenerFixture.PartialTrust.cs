@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Diagnostics;
-using Microsoft.Diagnostics.Tracing;
-using System.Linq;
 using System.Security;
-using System.Security.Permissions;
 using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Observable;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Diagnostics.Tracing;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Observable;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging
 {

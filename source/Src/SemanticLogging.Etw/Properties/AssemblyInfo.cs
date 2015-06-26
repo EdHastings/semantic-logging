@@ -4,7 +4,6 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Security;
 
 [assembly: AssemblyTitle("Enterprise Library Semantic ETW Logging Application Block")]
 [assembly: AssemblyDescription("Enterprise Library Semantic ETW Logging Application Block")]

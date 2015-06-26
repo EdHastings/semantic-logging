@@ -13,7 +13,6 @@ using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.RetryPolicies;
 using Microsoft.WindowsAzure.Storage.Table;
-using Guard = Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility.Guard;
 using WindowsAzureResources = Microsoft.Practices.EnterpriseLibrary.SemanticLogging.WindowsAzure.Properties.Resources;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks

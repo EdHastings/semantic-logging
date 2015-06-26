@@ -2,10 +2,10 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.Diagnostics.Tracing;
 using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Configuration;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration

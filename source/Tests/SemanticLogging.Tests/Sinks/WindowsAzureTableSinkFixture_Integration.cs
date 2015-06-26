@@ -1,12 +1,9 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks.WindowsAzure;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.EventListeners;

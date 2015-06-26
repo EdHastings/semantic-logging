@@ -2,8 +2,8 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.Diagnostics.Tracing;
 using System.Linq;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Diagnostics.Tracing.Session;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Utility

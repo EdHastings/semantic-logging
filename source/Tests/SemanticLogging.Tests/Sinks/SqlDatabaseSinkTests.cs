@@ -3,10 +3,10 @@
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.Properties;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;

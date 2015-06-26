@@ -3,8 +3,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Observable;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

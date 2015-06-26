@@ -3,7 +3,6 @@
 using System;
 using System.Xml.Linq;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Configuration;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestSupport;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

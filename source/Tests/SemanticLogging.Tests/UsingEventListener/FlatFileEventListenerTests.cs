@@ -1,19 +1,18 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
-using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestSupport;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 using System;
-using Microsoft.Diagnostics.Tracing;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.Diagnostics.Tracing;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
+using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestSupport;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.EventListeners
 {
