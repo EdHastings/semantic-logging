@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -55,7 +55,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters
         public string Footer { get; set; }
 
         /// <summary>
-        /// Gets or sets the lowest <see cref="System.Diagnostics.Tracing.EventLevel" /> value where the formatted output provides all the event entry information.
+        /// Gets or sets the lowest <see cref="Microsoft.Diagnostics.Tracing.EventLevel" /> value where the formatted output provides all the event entry information.
         /// Otherwise a summarized content of the event entry will be written.
         /// </summary>
         /// <value>The EventLevel.</value>

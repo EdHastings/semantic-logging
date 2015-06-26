@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -29,10 +29,10 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
                                               BindingFlags.Public;
 
         /// <summary>
-        /// Gets or sets a value indicating whether to exclude the internal <see cref="System.Diagnostics.Tracing.EventListener"/> instance to emulate sending events.
+        /// Gets or sets a value indicating whether to exclude the internal <see cref="Microsoft.Diagnostics.Tracing.EventListener"/> instance to emulate sending events.
         /// </summary>
         /// <remarks>
-        /// The analyzer performs a 'probing' execution using an internal <see cref="System.Diagnostics.Tracing.EventListener"/> instance to emulate logging using the inspected <see cref="EventSource"/> instance.
+        /// The analyzer performs a 'probing' execution using an internal <see cref="Microsoft.Diagnostics.Tracing.EventListener"/> instance to emulate logging using the inspected <see cref="EventSource"/> instance.
         /// By excluding this analysis, no ETW events will be sent in case of executing the analysis from a running application where ETW events may be monitored.
         /// </remarks>
         /// <value>
@@ -68,8 +68,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
         ///     <code>public static MyEventSource Instance = new MyEventSource();</code>
         ///   </remarks>
         /// </example>
-        /// <exception cref="EventSourceAnalyzerException">Exception thrown if a failure was found in the specified <see cref="System.Diagnostics.Tracing.EventSource" />.</exception>
-        /// <exception cref="ArgumentException">Exception thrown if a failure was found in the specified <see cref="System.Diagnostics.Tracing.EventSource" />.</exception>
+        /// <exception cref="EventSourceAnalyzerException">Exception thrown if a failure was found in the specified <see cref="Microsoft.Diagnostics.Tracing.EventSource" />.</exception>
+        /// <exception cref="ArgumentException">Exception thrown if a failure was found in the specified <see cref="Microsoft.Diagnostics.Tracing.EventSource" />.</exception>
         public static void InspectAll(EventSource eventSource)
         {
             var instance = new EventSourceAnalyzer();
@@ -77,7 +77,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
         }
 
         /// <summary>
-        /// Inspects the specified <see cref="System.Diagnostics.Tracing.EventSource" /> for potential runtime errors 
+        /// Inspects the specified <see cref="Microsoft.Diagnostics.Tracing.EventSource" /> for potential runtime errors 
         /// filtering out validations according to the specified instance properties.
         /// </summary>
         /// <param name="eventSource">The event source instance to inspect.</param>
@@ -87,8 +87,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
         ///   <code>public static MyEventSource Instance = new MyEventSource();</code>
         ///   </remarks>
         /// </example>
-        /// <exception cref="EventSourceAnalyzerException">Exception thrown if a failure was found in the specified <see cref="System.Diagnostics.Tracing.EventSource" />.</exception>
-        /// <exception cref="ArgumentException">Exception thrown if a failure was found in the specified <see cref="System.Diagnostics.Tracing.EventSource" />.</exception>
+        /// <exception cref="EventSourceAnalyzerException">Exception thrown if a failure was found in the specified <see cref="Microsoft.Diagnostics.Tracing.EventSource" />.</exception>
+        /// <exception cref="ArgumentException">Exception thrown if a failure was found in the specified <see cref="Microsoft.Diagnostics.Tracing.EventSource" />.</exception>
         public void Inspect(EventSource eventSource)
         {
             Guard.ArgumentNotNull(eventSource, "eventSource");

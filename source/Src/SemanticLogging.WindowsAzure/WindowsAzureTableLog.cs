@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Threading;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
@@ -30,7 +30,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging
         /// <param name="onCompletedTimeout">Defines a timeout interval for when flushing the entries after an <see cref="WindowsAzureTableSink.OnCompleted" /> call is received and before disposing the sink.</param>
         /// <param name="maxBufferSize">The maximum number of entries that can be buffered while it's sending to Azure Storage before the sink starts dropping entries.
         /// This means that if the timeout period elapses, some event entries will be dropped and not sent to the store. Normally, calling <see cref="IDisposable.Dispose" /> on
-        /// the <see cref="System.Diagnostics.Tracing.EventListener" /> will block until all the entries are flushed or the interval elapses.
+        /// the <see cref="Microsoft.Diagnostics.Tracing.EventListener" /> will block until all the entries are flushed or the interval elapses.
         /// If <see langword="null" /> is specified, then the call will block indefinitely until the flush operation finishes.</param>
         /// <returns>
         /// A subscription to the sink that can be disposed to unsubscribe the sink and dispose it, or to get access to the sink instance.

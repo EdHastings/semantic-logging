@@ -1,9 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using EventSourceSettings = Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration.EventSourceSettings;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.Etw
 {

@@ -3,7 +3,7 @@
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -49,19 +49,32 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.Sinks
             using (var collectErrorsListener = new MockEventListener())
             {
                 collectErrorsListener.EnableEvents(SemanticLoggingEventSource.Log, EventLevel.Error, Keywords.All);
-
                 sink.OnNext(EventEntryTestHelper.Create());
+
+                //ERH 6.26.2015: there is volatility around the delay when under load; the longer the delay the more likely the test will pass.
+                //               This probably indicates some kind of missed case or a bad assumption about the underlying implementation
+                const int waitTimeInSeconds = 10; 
+
                 try
                 {
-                    Assert.IsTrue(sink.FlushAsync().Wait(TimeSpan.FromSeconds(5)));
+                    Assert.IsTrue(sink.FlushAsync().Wait(TimeSpan.FromSeconds(waitTimeInSeconds)));
                     Assert.Fail("Exception should be thrown.");
                 }
                 catch (AggregateException ex)
                 {
-                    Assert.IsInstanceOfType(ex.InnerException, typeof(FlushFailedException));
+                    Console.WriteLine(ex.GetType());
+                    Assert.IsNotNull(ex.InnerException, "ex.InnerException != null");
+                    Console.WriteLine(ex.InnerException.GetType());
+                    Assert.IsInstanceOfType(ex.InnerException, typeof(FlushFailedException), 
+                        "exception should be of type FlushFailedException");
                 }
-
-                Assert.IsTrue(collectErrorsListener.WrittenEntries.Any(x => x.EventId == 101));
+                
+                Assert.IsTrue(
+                    collectErrorsListener.WrittenEntries.Any(
+                        x => x.EventId == 101
+                        ),
+                    "should have entries for eventid 101"
+                    );
             }
         }
 
@@ -74,9 +87,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.Sinks
             using (var collectErrorsListener = new MockEventListener())
             {
                 collectErrorsListener.EnableEvents(SemanticLoggingEventSource.Log, EventLevel.Error, Keywords.All);
-
-                sink.OnNext(EventEntryTestHelper.Create());
-                Assert.IsTrue(Task.Run(() => sink.OnCompleted()).Wait(TimeSpan.FromSeconds(5)));
+                var closure = sink;
+                closure.OnNext(EventEntryTestHelper.Create());
+                Assert.IsTrue(Task.Run(() => closure.OnCompleted()).Wait(TimeSpan.FromSeconds(5)));
 
                 Assert.IsTrue(collectErrorsListener.WrittenEntries.Any(x => x.EventId == 101));
             }

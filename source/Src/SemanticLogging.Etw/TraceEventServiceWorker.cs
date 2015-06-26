@@ -3,15 +3,15 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Diagnostics.Tracing;
 using Microsoft.Diagnostics.Tracing.Parsers;
 using Microsoft.Diagnostics.Tracing.Session;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Utility;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
+using EventSourceSettings = Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration.EventSourceSettings;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw
 {

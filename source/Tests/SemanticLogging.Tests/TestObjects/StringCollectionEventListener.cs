@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;

@@ -46,7 +46,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks
         /// <param name="maxBufferSize">The maximum number of entries that can be buffered while it's sending to Azure Storage before the sink starts dropping entries.</param>
         /// <param name="onCompletedTimeout">Defines a timeout interval for when flushing the entries after an <see cref="OnCompleted"/> call is received and before disposing the sink.
         /// This means that if the timeout period elapses, some event entries will be dropped and not sent to the store. Normally, calling <see cref="IDisposable.Dispose"/> on 
-        /// the <see cref="System.Diagnostics.Tracing.EventListener"/> will block until all the entries are flushed or the interval elapses.
+        /// the <see cref="Microsoft.Diagnostics.Tracing.EventListener"/> will block until all the entries are flushed or the interval elapses.
         /// If <see langword="null"/> is specified, then the call will block indefinitely until the flush operation finishes.</param>
         public WindowsAzureTableSink(string instanceName, string connectionString, string tableAddress, TimeSpan bufferInterval, int maxBufferSize, TimeSpan onCompletedTimeout)
         {

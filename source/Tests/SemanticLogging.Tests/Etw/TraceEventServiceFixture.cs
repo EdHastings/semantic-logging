@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using Microsoft.Diagnostics.Tracing.Session;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Configuration;
@@ -12,6 +12,7 @@ using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestSupport;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using EventSourceSettings = Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw.Configuration.EventSourceSettings;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.Etw
 {

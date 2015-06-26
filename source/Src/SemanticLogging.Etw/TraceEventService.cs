@@ -12,7 +12,7 @@ using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility;
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Etw
 {
     /// <summary>
-    /// Class for listening ETW trace events sent by an implementation of <see cref="System.Diagnostics.Tracing.EventSource"/> typed event.
+    /// Class for listening ETW trace events sent by an implementation of <see cref="Microsoft.Diagnostics.Tracing.EventSource"/> typed event.
     /// </summary>
     public sealed class TraceEventService : IDisposable
     {

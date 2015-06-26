@@ -59,7 +59,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Sinks.WindowsAzu
         }
 
         /// <summary>
-        /// Gets or sets the unique identifier for the provider, which is typically the class derived from <see cref="System.Diagnostics.Tracing.EventSource"/>.
+        /// Gets or sets the unique identifier for the provider, which is typically the class derived from <see cref="Microsoft.Diagnostics.Tracing.EventSource"/>.
         /// </summary>
         /// <value>
         /// The provider ID.

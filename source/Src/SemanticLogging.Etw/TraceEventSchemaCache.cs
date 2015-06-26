@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using Microsoft.Diagnostics.Tracing;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;
 

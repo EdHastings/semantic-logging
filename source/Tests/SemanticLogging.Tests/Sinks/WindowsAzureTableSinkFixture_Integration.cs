@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 using System.Linq;
 using System.Threading;
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Schema;

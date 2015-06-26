@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters
 {
@@ -41,7 +41,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters
         public const ConsoleColor Informational = ConsoleColor.Gray;
 
         /// <summary>
-        /// Maps the specified <see cref="System.Diagnostics.Tracing.EventLevel"/> to a <see cref="System.ConsoleColor"/>.
+        /// Maps the specified <see cref="Microsoft.Diagnostics.Tracing.EventLevel"/> to a <see cref="System.ConsoleColor"/>.
         /// </summary>
         /// <param name="eventLevel">The event level.</param>
         /// <returns>The console color.</returns>

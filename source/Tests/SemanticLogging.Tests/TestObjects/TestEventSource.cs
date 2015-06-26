@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObjects
 {
@@ -40,7 +40,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Tests.TestObject
         }
 
         [Event(VerboseEventId, Level = EventLevel.Verbose)]
-        public void Write(string message) { WriteEvent(VerboseEventId, message); }
+        public new void Write(string message) { WriteEvent(VerboseEventId, message); }
 
         [Event(EventWithoutPayloadNorMessageId, Level = EventLevel.Warning)]
         public void EventWithoutPayloadNorMessage()

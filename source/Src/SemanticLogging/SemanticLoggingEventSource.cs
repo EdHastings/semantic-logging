@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
-using System.Diagnostics.Tracing;
+using Microsoft.Diagnostics.Tracing;
 
 namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging
 {
@@ -367,12 +367,14 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging
             }
         }
 
-        [Event(1000, Level = EventLevel.Error, Keywords = Keywords.Sink, Message = "Parsing the manifest for provider '{0}' to handle the event with ID {1} failed. Message: {2}")]
+        [Event(1000, 
+            Level = EventLevel.Error, Keywords = Keywords.Sink,
+            Message = "Parsing the manifest for provider '{0}' to handle the event with ID {1} failed. Message: {2}")]
         internal void ParsingEventSourceManifestFailed(string providerName, int eventId, string message)
         {
             if (this.IsEnabled())
             {
-                this.WriteEvent(903, providerName, eventId, message);
+                this.WriteEvent(1000, providerName, eventId, message);
             }
         }
 
