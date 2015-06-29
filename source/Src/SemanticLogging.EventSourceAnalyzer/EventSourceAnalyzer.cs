@@ -136,9 +136,15 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
 
         private ICollection<EventSchema> GetEventSchemas(EventSource eventSource)
         {
+            if(eventSource == null)
+                throw  new ArgumentNullException("eventSource");
+
             try
             {
-                string manifest = EventSource.GenerateManifest(eventSource.GetType(), null);
+                var manifest = EventSource.GenerateManifest(
+                    eventSource.GetType(), 
+                    Assembly.GetAssembly(eventSource.GetType()).Location
+                    );
                 this.CheckForBadFormedManifest(manifest);
                 return new EventSourceSchemaReader().GetSchema(manifest).Values;
             }
@@ -148,7 +154,23 @@ namespace Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Utility
             }
             catch (Exception e)
             {
-                throw new EventSourceAnalyzerException(string.Format(CultureInfo.CurrentCulture, Properties.Resources.EventSourceAnalyzerManifestGenerationError, e.Message, EventSource.GenerateManifest(eventSource.GetType(), null)));
+                if (eventSource.ConstructionException != null)
+                {
+                    throw new EventSourceAnalyzerException(
+                        e.Message,
+                        eventSource.ConstructionException
+                        );
+                }
+
+                throw new EventSourceAnalyzerException(
+                    string.Format(
+                        CultureInfo.CurrentCulture,
+                        Resources.EventSourceAnalyzerManifestGenerationError,
+                        e.Message,
+                        EventSource.GenerateManifest(
+                            eventSource.GetType(),
+                            null
+                            )));
             }
         }
 
